@@ -99,12 +99,7 @@
           <li>The proposed SR framework is highly flexible and could produce diverse results given different rank datasets, perceptual
               metrics, and loss combinations.
           </li>
-          (1) We propose a general perceptual SR framework
-– RankSRGAN that could optimize generator in the direction of indifferentiable perceptual metrics and achieve the
-state-of-the-art performance. (2) We, for the first time, utilize results of other SR methods to build the training dataset.
-The proposed RankSRGAN could combine the strengths of
-different SR methods and generate better results. (3) The proposed SR framework is highly flexible and could produce diverse results given different rank datasets, perceptual
-metrics, and loss combinations.
+
         </ol>
       </div>
       <!--=================Materials==========================-->
@@ -159,10 +154,9 @@ performance in perceptual metrics.
       <div class="section" , id="pcd_tsa">
         <h2> RankSRGAN Framework</h2>
         <p>
-          <b>Left:</b> PCD alignment module with Pyramid, Cascading and Deformable convolution; <b>Right:</b> TSA
-          fusion module with Temporal and Spatial Attention. See <a href="#">our paper</a> for more details.
-          <b>Overview of the proposed method:</b> <b>Stage 1:</b>: Generate pair-wise rank images by different SR models in the orientation of
-          perceptual metrics. <b>Stage 2:</b>: Train Siamese-like Ranker network. <b>Stage 3:</b>: Introduce rank-content loss derived from 
+
+          <b>Overview of the proposed method:</b> <b>Stage 1:</b> Generate pair-wise rank images by different SR models in the orientation of
+          perceptual metrics. <b>Stage 2:</b> Train Siamese-like Ranker network. <b>Stage 3:</b> Introduce rank-content loss derived from 
           well-trained Ranker to guide GAN training. RankSRGAN consists of a generator(G), discriminator(D), a fixed Feature extractor(F) and Ranker(R)
         </p>
         <div id="sr" class="img_container">
