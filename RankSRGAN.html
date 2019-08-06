@@ -59,7 +59,7 @@
         </div>
 
         <div class="affiliations ">
-          SIAT-SenseTime Joint Lab, Shenzhen Institutes of Advanced Technology,\\ Chinese Academy of Sciences
+          SIAT-SenseTime Joint Lab, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences
         </div>
         <!--=================Tabs==========================-->
         <ul id="tabs">
@@ -71,7 +71,7 @@
       </div>
       <br>
       <!--=================Teasers==========================-->
-      <div id="img_intro_examples" class="img_container">
+<!--       <div id="img_intro_examples" class="img_container">
         <center>
           <div class="leftView">
             <div class="mask" style="width:80px;height:80px"></div>
@@ -86,17 +86,25 @@
           blurry inputs, a PreDeblur
           Module is inserted before the PCD Align Module to improve alignment accuracy. We use three input frames as an
           illustrative example.</p>
-      </div>
+      </div> -->
       <!--=================Highlights==========================-->
       <div class="section abstract">
-        <h2>Highlights</h2>
+        <h2>Contributions</h2>
         <ol>
-          <li>EDVR wins all <b>four</b> tracks in the <a href="http://www.vision.ee.ethz.ch/ntire19/"
-              target="_blank">NTIRE19 video restoration and enhancement challenges</a>.</li>
-          <li>We propose the PCD alignment module and TSA fusion module for effective alignment and fusion, respectively.
+          <li>We propose a general perceptual SR framework – RankSRGAN that could optimize generator in the direction of
+            indifferentiable perceptual metrics and achieve the state-of-the-art performance.</li>
+          <li>We, for the first time, utilize results of other SR methods to build the training dataset.
+              The proposed RankSRGAN could combine the strengths of different SR methods and generate better results.
           </li>
-          <li>We are constructing the <a href="https://xinntao.github.io/open-videorestoration/" target="_blank"><b>Open Video Restoration</b></a> project.
+          <li>The proposed SR framework is highly flexible and could produce diverse results given different rank datasets, perceptual
+              metrics, and loss combinations.
           </li>
+          (1) We propose a general perceptual SR framework
+– RankSRGAN that could optimize generator in the direction of indifferentiable perceptual metrics and achieve the
+state-of-the-art performance. (2) We, for the first time, utilize results of other SR methods to build the training dataset.
+The proposed RankSRGAN could combine the strengths of
+different SR methods and generate better results. (3) The proposed SR framework is highly flexible and could produce diverse results given different rank datasets, perceptual
+metrics, and loss combinations.
         </ol>
       </div>
       <!--=================Materials==========================-->
@@ -147,12 +155,15 @@ better results. Extensive experiments show that RankSRGAN achieves visually plea
 performance in perceptual metrics.
         </p>
       </div>
-      <!--=================PCD and TSA Modules==========================-->
+      <!--=================RankSRGAN Modules==========================-->
       <div class="section" , id="pcd_tsa">
-        <h2> PCD and TSA Modules</h2>
+        <h2> RankSRGAN Framework</h2>
         <p>
           <b>Left:</b> PCD alignment module with Pyramid, Cascading and Deformable convolution; <b>Right:</b> TSA
           fusion module with Temporal and Spatial Attention. See <a href="#">our paper</a> for more details.
+          <b>Overview of the proposed method:</b> <b>Stage 1:</b>: Generate pair-wise rank images by different SR models in the orientation of
+          perceptual metrics. <b>Stage 2:</b>: Train Siamese-like Ranker network. <b>Stage 3:</b>: Introduce rank-content loss derived from 
+          well-trained Ranker to guide GAN training. RankSRGAN consists of a generator(G), discriminator(D), a fixed Feature extractor(F) and Ranker(R)
         </p>
         <div id="sr" class="img_container">
           <center>
@@ -164,13 +175,9 @@ performance in perceptual metrics.
 
       <!--=================Ablation studies==========================-->
       <div class="section" , id="ablations">
-        <h2>Ablation Studies on PCD and TSA Modules</h2>
+        <h2>Ablation Studies on RankSRGAN</h2>
         <p>
-          We show representative features before and after different alignment modules, and depict the flow (derived by
-          PWCNet)
-          between reference and neighboring features. Compared with the flow without PCD alignment, the flow of the PCD
-          outputs
-          is much smaller and cleaner, indicating that the PCD module can successfully handle large and complex motions.
+          We show 
         </p>
         <div id="sr" class="img_container">
           <center>
@@ -178,12 +185,7 @@ performance in perceptual metrics.
           </center>
         </div>
         <p>
-          We present the flow between the reference and neighboring frames, together with the temporal attention of each
-          frame.
-          It is observed that the frames and regions with lower flow magnitude tend to have higher attention, indicating
-          that
-          the smaller the motion is, the more informative
-          the corresponding frames and regions are.
+          We present 
         </p>
         <div id="sr" class="img_container">
           <center>
@@ -196,7 +198,7 @@ performance in perceptual metrics.
       <div class="section" , id="results">
         <h2>Results</h2>
         <!--=================*******==========================-->
-        <h3>1. Video Super-Resolution on Vid4 Dataset</h3>
+        <h3>Visual results</h3>
         <div id="vid4" class="img_container">
           <center>
             <div class="leftView">
@@ -207,7 +209,7 @@ performance in perceptual metrics.
         </div>
         <br>
         <!--=================*******==========================-->
-        <h3>2. Video Super-Resolution on Vimeo90K Dataset</h3>
+<!--         <h3>2. Video Super-Resolution on Vimeo90K Dataset</h3>
         <div id="vimeo90k" class="img_container">
           <center>
             <div class="leftView">
@@ -216,9 +218,9 @@ performance in perceptual metrics.
             </div>
           </center>
         </div>
-        <br>
+        <br> -->
         <!--=================*******==========================-->
-        <h3>3. Video Deblurring on REDS4 Dataset</h3>
+<!--         <h3>3. Video Deblurring on REDS4 Dataset</h3>
         <div id="reds4" class="img_container">
           <center>
             <div class="leftView">
@@ -227,9 +229,9 @@ performance in perceptual metrics.
             </div>
           </center>
         </div>
-        <br>
+        <br> -->
         <!--=================*******==========================-->
-        <h3>4. Competition Results on REDS4 Dataset</h3>
+<!--         <h3>4. Competition Results on REDS4 Dataset</h3>
         <div id="reds4" class="img_container">
           <center>
             <div class="leftView">
@@ -239,9 +241,9 @@ performance in perceptual metrics.
           </center>
         </div>
         <br>
-      </div>
+      </div> -->
       <!--=================Citation==========================-->
-      <div class="section citation" , id="citation">
+<!--       <div class="section citation" , id="citation">
         <h2>Citation</h2>
         <div class="section bibtex">
           <pre>@InProceedings{wang2019edvr,
@@ -260,11 +262,12 @@ performance in perceptual metrics.
           }
           </pre>
         </div>
-      </div>
+      </div> -->
+        
       <!--=================Contact==========================-->
       <div class="section contact">
         <h2 id="contact">Contact</h2>
-        <p>If you have any question, please contact Xintao Wang at <strong>wx016@ie.cuhk.edu.hk</strong>.</p>
+        <p>If you have any question, please contact Wenlong Zhang at <strong>zhangwenlong0724@gmail.com</strong>.</p>
       </div>
 </body>
 
