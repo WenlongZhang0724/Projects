@@ -59,12 +59,12 @@
         </div>
 
         <div class="affiliations ">
-          SIAT-SenseTime Joint Lab, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences
+          SIAT-SenseTime Joint Lab, Shenzhen Institutes of Advanced Technology,\\ Chinese Academy of Sciences
         </div>
         <!--=================Tabs==========================-->
         <ul id="tabs">
           <li><a href="#materials" name="#tab1">Materials</a></li>
-          <li><a href="#pcd_tsa" name="#tab2">PCD & TSA</a></li>
+          <li><a href="#RankSRGAN" name="#tab2">RankSRGAN</a></li>
           <li><a href="#ablations" name="#tab3">Ablations</a></li>
           <li><a href="#results" name="#tab4">Results</a></li>
           <li><a href="#citation" name="#tab5">Citation</a></li>
@@ -134,27 +134,17 @@
         <h2>Abstract</h2>
         <br>
         <p>
-          Video restoration tasks, including super-resolution, deblurring, <i>etc</i>, are drawing increasing attention
-          in the computer
-          vision community. A challenging benchmark named REDS is released in the NTIRE19 Challenge. This new benchmark
-          challenges
-          existing methods from two aspects: (1) how to <b>align</b> multiple frames given large motions, and (2) how to
-          effectively <b>fuse</b>
-          different frames with diverse motion and blur. In this work, we propose a novel Video Restoration framework
-          with
-          Enhanced Deformable networks, termed EDVR, to address these challenges. First, to handle large motions, we
-          devise a
-          <b>Pyramid, Cascading and Deformable (PCD) alignment module</b>, in which frame alignment is done at the
-          feature level using
-          deformable convolutions in a coarse-to-fine manner. Second, we propose a <b>Temporal and Spatial Attention
-            (TSA) fusion
-            module</b>, in which attention is applied both temporally and spatially, so as to emphasize important
-          features for
-          subsequent restoration. Thanks to these modules, our EDVR <b><i>wins the champions</i></b> and outperforms the
-          second place by <b><i>a large
-              margin</i></b> in all four tracks in the NTIRE19 video restoration and enhancement challenges. EDVR also
-          demonstrates superior
-          performance to state-of-the-art published methods on video super-resolution and deblurring.
+Generative Adversarial Networks (GAN) have demonstrated the potential to recover realistic details for single
+image super-resolution (SISR). To further improve the visual quality of super-resolved results, PIRM2018-SR 
+Challenge employed perceptual metrics to assess the perceptual quality, such as PI, NIQE, and Ma. However, 
+existing methods cannot directly optimize these indifferentiable perceptual metrics, which are shown to be highly correlated with
+human ratings. To address the problem, we propose SuperResolution Generative Adversarial Networks with Ranker
+(RankSRGAN) that can optimize generator in the direction
+of perceptual metrics and generate more natural textures.
+The most appealing part is that the proposed method can
+combine the strengths of different SR methods to generate
+better results. Extensive experiments show that RankSRGAN achieves visually pleasing results and reaches stateof-the-art 
+performance in perceptual metrics.
         </p>
       </div>
       <!--=================PCD and TSA Modules==========================-->
