@@ -184,18 +184,31 @@
       <!--=================Ablation studies==========================-->
       <div class="section" , id="ablations">
         <h2>Ablation Studies on RankSRGAN</h2>
+        <h3>1. Effect of different rank datasets</h3>
+        <p>
+          We show the convergence curves of RankSRGAN with different rank datasets in NIQE and PSNR.
+        </p>
+        <div id="sr" class="img_container">
+          <center>
+            <img style="width:90%" src="./RankSRGAN_src/ranksrgan_hr.png">
+          </center>
+        </div>
+
+      <!--=================2==========================-->
+        <h3>2. Effect of Ranker: Rank VS. Regression</h3>
 
         <p>
-          <b>We show the hist distribution of Ranker in NIQE and Ma metrics: </b> 
+          We show the hist distribution of Ranker in NIQE and Ma metrics. The convergence curves are shown in section 3.
         </p>
         <div id="sr" class="img_container">
           <center>
             <img style="width:90%" src="./RankSRGAN_src/hist.png">
           </center>
         </div>
-
+      <!--=================2==========================-->
+        <h3>3. Effect of different perceptual metrics</h3>
         <p>
-          We present the curves showing that our RankSRGAN can achieve a constant improvement compared with the baseline SRGAN on perceptual metrics (NIQE, Ma and PI). 
+          We present the convergence curves showing that our RankSRGAN can achieve a constant improvement compared with the baseline SRGAN on perceptual metrics (NIQE, Ma and PI). 
         </p>
         <div id="sr" class="img_container">
           <center>
@@ -203,6 +216,33 @@
           </center>
         </div>
       </div>
+      <!--=================2==========================-->
+        <h3>4. Effect of Ranker with different architectures</h3>
+        <p>
+          We train three VGG networks varying from shallow to
+          deep ones: VGG-8, VGG-12 and VGG-16. The figure shows the performance of RankSRGAN with different Rankers (VGG-8, VGG-12) 
+        </p>
+        <div id="sr" class="img_container">
+          <center>
+            <img style="width:90%" src="./RankSRGAN_src/ranksrgan_r.png">
+          </center>
+        </div>
+      </div>
+
+        <h3>5. Effect of Rank dataset with different sizes</h3>
+        <p>
+          We employ DIV2K to generate rank dataset1 (D1) with <b>15</b> K image pairs and
+          use DIV2K+Flickr2k to generate rank dataset2 (D2) with <b>150 K</b> image pairs. Then, we utilize rank dataset1 and rank dataset2
+          to train Ranker1 (SROCC 0.78) and Ranker2 (SROCC 0.88), respectively. The convergence curves show that the Ranker2 with higher SROCC can reach better performance in
+          NIQE and PSNR.
+        </p>
+        <div id="sr" class="img_container">
+          <center>
+            <img style="width:90%" src="./RankSRGAN_src/ranksrgan_data.png">
+          </center>
+        </div>
+      </div>
+
       <br>
       <!--=================Applications==========================-->
       <div class="section" , id="results">
@@ -212,19 +252,19 @@
 
         <div id="vid1" class="img_container">
           <center>
-            <img style="width:90%" src="./RankSRGAN_src/VS3.png">
+            <img style="width:90%" src="./RankSRGAN_src/vs3.png">
           </center>
         </div>
 
         <div id="vid2" class="img_container">
           <center>
-            <img style="width:90%" src="./RankSRGAN_src/VS2.png">
+            <img style="width:90%" src="./RankSRGAN_src/vs2.png">
           </center>
         </div>
 
         <div id="vid3" class="img_container">
           <center>
-            <img style="width:90%" src="./RankSRGAN_src/VS1.png">
+            <img style="width:90%" src="./RankSRGAN_src/vs1.png">
           </center>
         </div>
         <br>
