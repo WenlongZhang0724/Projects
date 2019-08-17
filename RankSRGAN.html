@@ -187,7 +187,9 @@
         <h2>Ablation Studies on RankSRGAN</h2>
         <h3>1. Effect of different rank datasets</h3>
         <p>
-          We show the convergence curves of RankSRGAN with different rank datasets in NIQE and PSNR.
+          We show the convergence curves of RankSRGAN with different rank datasets in NIQE and PSNR. 
+          RankSRGAN uses the Ranker with rank dataset <b>(SRResNet, SRGAN, ESRGAN)</b>. 
+          RankSRGAN-HR employs the Ranker with rank dataset <b>(SRResNet, SRGAN, HR)</b>. 
         </p>
         <div id="as1" class="img_container">
           <center>
@@ -213,7 +215,7 @@
         <h3>3. Effect of different perceptual metrics</h3>
         <p>
           We present the convergence curves showing that our RankSRGAN can achieve a constant improvement compared with
-          the baseline SRGAN on different perceptual metrics (NIQE, Ma and PI). 
+          the baseline SRGAN on different perceptual metrics <b>(NIQE, Ma and PI)</b>. 
         </p>
         <div id="as3" class="img_container">
           <center>
@@ -226,11 +228,14 @@
         <h3>4. Effect of Ranker with different architectures</h3>
         <p>
           We train three VGG networks varying from shallow to
-          deep ones: VGG-8, VGG-12 and VGG-16. The figure shows the performance of RankSRGAN with different Rankers (VGG-8, VGG-12) 
+          deep ones: VGG-8, VGG-12 and VGG-16.  Since the VGG-12 can achieve the same accuracy as VGG-16 (SROCC 0.88), 
+          we apply the VGG-8 (SROCC 0.83) and VGG-12 (SROCC 0.88) on RankSRGAN.
+          The figure shows the performance of RankSRGAN with different Rankers. The Ranker with higher value of
+          SROCC can achieve better performance when applied on RankSRGAN. 
         </p>
         <div id="as4" class="img_container">
           <center>
-            <img style="width:90%" src="./RankSRGAN_src/RankSRGAN_HR.png">
+            <img style="width:90%" src="./RankSRGAN_src/ranksrgan_r.png">
           </center>
         </div>
       <br>
