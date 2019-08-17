@@ -97,9 +97,7 @@
             image super-resolution (SISR). To further improve the visual quality of super-resolved results, <b>PIRM2018-SR 
             Challenge</b> employed perceptual metrics to assess the perceptual quality, such as <b>PI, NIQE, and Ma</b>. However, 
             existing methods cannot directly optimize these <b>indifferentiable</b> perceptual metrics, which are shown to be highly correlated with
-            <b>human ratings</b>. To address the problem, we propose <b>Super Resolution Generative Adversarial Networks with Ranker
-            (RankSRGAN)</b> that can optimize generator in the <b>direction
-            of perceptual metrics</b> and generate more natural textures.
+            human ratings. To address the problem, we propose Super-Resolution Generative Adversarial Networks with Ranker (<b>RankSRGAN</b>) to optimize generator in the direction of perceptual metrics. Specifically, we first train a Ranker which can learn the behavior of perceptual metrics and then introduce a novel <b>rank-content loss</b> to optimize the perceptual quality.
             The most appealing part is that the proposed method can
             combine the strengths of different SR methods to generate
             better results. Extensive experiments show that RankSRGAN achieves visually pleasing results and reaches stateof-the-art 
