@@ -97,7 +97,7 @@
             image super-resolution (SISR). To further improve the visual quality of super-resolved results, <b>PIRM2018-SR 
             Challenge</b> employed perceptual metrics to assess the perceptual quality, such as <b>PI, NIQE, and Ma</b>. However, 
             existing methods cannot directly optimize these <b>indifferentiable</b> perceptual metrics, which are shown to be highly correlated with
-            human ratings. To address the problem, we propose Super-Resolution Generative Adversarial Networks with Ranker (<b>RankSRGAN</b>) to optimize generator in the direction of perceptual metrics. Specifically, we first train a Ranker which can learn the behavior of perceptual metrics and then introduce a novel <b>rank-content loss</b> to optimize the perceptual quality.
+            human ratings. To address the problem, we propose Super-Resolution Generative Adversarial Networks with Ranker (<b>RankSRGAN</b>) to optimize generator in the direction of perceptual metrics. Specifically, we first train a <b>Ranker</b> which can learn the behavior of perceptual metrics and then introduce a novel <b>rank-content loss</b> to optimize the perceptual quality.
             The most appealing part is that the proposed method can
             combine the strengths of different SR methods to generate
             better results. Extensive experiments show that RankSRGAN achieves visually pleasing results and reaches stateof-the-art 
@@ -136,7 +136,7 @@
               <center>
                 <a href="https://github.com/WenlongZhang0724/RankSRGAN" target="_blank" class="imageLink"><img src="./icon_github.png"
                     , width="50%"></a><br><br>
-                <a href="https://github.com/WenlongZhang0724/RankSRGAN" target="_blank">Codes</a>
+                <a href="https://github.com/WenlongZhang0724/RankSRGAN" target="_blank">Codes (coming soon)</a>
               </center>
             </td>
           </tr>
@@ -162,11 +162,12 @@
         </p>
         
         <p>
-          <b>We show the hist distribution of Ranker in NIQE and Ma metrics: </b> 
+          We show the convergence curves of RankSRGAN. RankSRGAN is
+          consistently better than SRGAN by a large margin on NIQE.
         </p>
         <div id="sr" class="img_container">
           <center>
-            <img style="width:90%" src="./RankSRGAN_src/hist.png">
+            <img style="width:90%" src="./RankSRGAN_src/curve.png">
           </center>
         </div>
         
@@ -176,15 +177,16 @@
       <!--=================Ablation studies==========================-->
       <div class="section" , id="ablations">
         <h2>Ablation Studies on RankSRGAN</h2>
+
         <p>
-          We show the convergence curves of RankSRGAN. RankSRGAN is
-          consistently better than SRGAN by a large margin on NIQE.
+          <b>We show the hist distribution of Ranker in NIQE and Ma metrics: </b> 
         </p>
         <div id="sr" class="img_container">
           <center>
-            <img style="width:90%" src="./RankSRGAN_src/curve.png">
+            <img style="width:90%" src="./RankSRGAN_src/hist.png">
           </center>
         </div>
+
         <p>
           We present the curves showing that our RankSRGAN can achieve a constant improvement compared with the baseline SRGAN on perceptual metrics (NIQE, Ma and PI). 
         </p>
@@ -200,15 +202,39 @@
         <h2>Results</h2>
         <!--=================*******==========================-->
         <h3>Visual results</h3>
-        <div id="vid4" class="img_container">
+        <div id="vid1" class="img_container">
           <center>
             <div class="leftView">
               <div class="mask" style="width:70px;height:70px"></div>
-              <img class='small' src="./EDVR_src/vid4.jpg">
+              <img class='small' src="./RankSRGAN_src/VS1.png">
+            </div>
+          </center>
+        </div>
+
+        <div id="vid2" class="img_container">
+          <center>
+            <div class="leftView">
+              <div class="mask" style="width:70px;height:70px"></div>
+              <img class='small' src="./RankSRGAN_src/VS2.png">
+            </div>
+          </center>
+        </div>
+
+
+        <div id="vid3" class="img_container">
+          <center>
+            <div class="leftView">
+              <div class="mask" style="width:70px;height:70px"></div>
+              <img class='small' src="./RankSRGAN_src/VS3.png">
             </div>
           </center>
         </div>
         <br>
+
+
+
+
+
         <!--=================*******==========================-->
 <!--         <h3>2. Video Super-Resolution on Vimeo90K Dataset</h3>
         <div id="vimeo90k" class="img_container">
